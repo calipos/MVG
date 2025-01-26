@@ -10,8 +10,10 @@ def figureDualConicBaseTwoRightAngles(right1,right2):
     m1 = figureLineBaseTwoImgPts.figureLineBaseTwoImgPts(right1[0], right1[2])
     l2 = figureLineBaseTwoImgPts.figureLineBaseTwoImgPts(right2[0], right2[1])
     m2 = figureLineBaseTwoImgPts.figureLineBaseTwoImgPts(right2[0], right2[2])
+    A = np.zeros([4, 3], dtype=np.float64)
+    A[0, :] = np.array(
+        [l1[0]*m1[0], l1[0]*m1[1]+l1[1]*m1[0], l1[1]*m1[1]], dtype=np.float64)
 
-    
     return
 
 if __name__ == '__main__':
